@@ -1,0 +1,39 @@
+function categoryChange(e) {
+    const state = document.getElementById("state");
+
+    const headquarter = ["교무처","학생진로취업처","기획처","사무국"];
+    const college = ["인문대학","사회과학대학","경상대학","사범대학","생명자원과학대학","해양과학대학","자연과학대학","공과대학","의과대학","교육대학","수의과대학","간호대학","예술디자인대학","미래융합대학","약학대학"];
+    const generalgradschool = ["대학원"]];
+    const professionalgradschool = ["통역번역대학원","법학전문대학원"];
+    const specialgradschool = ["교육대학원","경영대학원","행정대학원","산업대학원","사회교육대학원","보건복지대학원"];
+    const basicfacility = ["중앙도서관","정보화본부"];
+    const supportfacility = ["총장직할지원시설","기타지원시설"];
+    const other = ["소비자생활협동조합"];
+
+    if (e.value == "general01") {
+      add = headquarter;
+    } else if (e.value == "general02") {
+      add = college;
+    } else if (e.value == "general03") {
+      add = generalgradschool;
+    } else if (e.value == "general04") {
+      add = professionalgradschool;
+    } else if (e.value == "general05") {
+      add = specialgradschool;
+    } else if (e.value == "general06") {
+      add = basicfacility;
+    } else if (e.value == "general07") {
+      add = supportfacility;
+    } else if (e.value == "general08") {
+      add = other;
+
+      state.options.length = 1;
+      // 중분류갯수;
+    
+        for (property in add) {
+            let opt = document.createElement("option");
+            opt.value = add[property];
+            opt.innerHTML = add[property];
+            state.appendChild(opt);
+        }
+    }      
