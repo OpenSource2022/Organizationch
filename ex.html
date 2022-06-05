@@ -6,7 +6,15 @@
         <title>페이지 이름</title><!--페이지 이름, 차후에 변경-->
     </head>
     <header><center><h1>타이틀</h1></center></header><!--타이틀 이름, 차후에 변경, 이미지 추가 등-->
+      
     <body>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+          </tr>
+        </thead>
+      </table>
         <div class="flexContainer">
             <div class="selectBox">
                 <!--셀렉트박스1-->
@@ -49,7 +57,10 @@
 
             </div>
         </div>
-        
+        <script>
+        xhttp.open("GET","jnu.json", true);
+        xhttp.send();
+        </script>
         <script src="SelectFunction.js"></script>
     </body>
 </html>
