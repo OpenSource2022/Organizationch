@@ -1,27 +1,55 @@
-<div class="search_boxes">
-    <div class="search_box">
-      <select name="" id="" onchange="categoryChange(this)">
-        <option value>시/도 선택</option>
-        <option value="general01">강원</option>
-        <option value="general02">경기</option>
-        <option value="general03">경남</option>
-        <option value="general04">경북</option>
-        <option value="general05">광주</option>
-        <option value="general06">대구</option>
-        <option value="general07">대전</option>
-        <option value="general08">부산</option>
-        <option value="general09">서울</option>
-        <option value="general10">울산</option>
-        <option value="general11">인천</option>
-        <option value="general12">전남</option>
-        <option value="general13">전북</option>
-        <option value="general14">제주</option>
-        <option value="general15">충남</option>
-        <option value="general16">충북</option>
-      </select>
-    </div>
-    <div class="search_box">
-      <select name="" id="state">
-        <option>군/구 선택</option>
-      </select>
-    </div>
+<!doctype html>
+<html>
+    <link rel="stylesheet" href="Style.css" type="text/css">
+    <head>
+        <meta charset "UTF-8">
+        <title>페이지 이름</title><!--페이지 이름, 차후에 변경-->
+    </head>
+    <header><center><h1>타이틀</h1></center></header><!--타이틀 이름, 차후에 변경, 이미지 추가 등-->
+    <body>
+        <div class="flexContainer">
+            <div class="selectBox">
+                <!--셀렉트박스1-->
+                <select name="test1" id="test1" onchange="categoryChange1(this)"><!--셀렉트박스 이름, id 차후에 변경-->
+                    <option value="">첫 번째 셀렉트</option><!--셀렉트박스 초기값, 차후에 변경-->
+                    <option value="firstTest1">테스트 1</option><!--value="firstTest1"를 js 파일에서 참조한다. -->
+                    <option value="firstTest2">테스트 2</option>
+                    <option value="firstTest3">테스트 3</option>
+                    <option value="firstTest4">테스트 4</option>
+                </select>
+
+                <!--셀렉트박스2-->
+                <select name="test2" id="test2" onchange="categoryChange2(this)"><!--셀렉트박스 이름, id 차후에 변경-->
+                    <option value="">두 번째 셀렉트</option><!--셀렉트박스 초기값, 차후에 변경-->
+                    <!--js파일에서 값을 받아와서 표시하기 때문에 모든 옵션 값을 삭제-->
+                    <!--참조할 value 값이 없다-->
+                </select>
+
+                <!--셀렉트박스3-->
+                <select name="test3" id="test3" onchange="categoryChange2(this)"><!--셀렉트박스 이름, id 차후에 변경-->
+                    <option value="">세 번째 셀렉트</option><!--셀렉트박스 초기값, 차후에 변경-->
+                    <option value="thirdTest1">테스트 1</option>
+                    <option value="thirdTest2">테스트 2</option>
+                    <option value="thirdTest3">테스트 3</option>
+                    <option value="thirdTest4">테스트 4</option>
+                </select>
+
+                <!--셀렉트박스4-->
+                <select name="test4" id="test4"><!--셀렉트박스 이름, id 차후에 변경-->
+                    <option value="">네 번째 셀렉트</option><!--셀렉트박스 초기값, 차후에 변경-->
+                    <option value="fourthTest1">테스트 1</option>
+                    <option value="fourthTest2">테스트 2</option>
+                    <option value="fourthTest3">테스트 3</option>
+                    <option value="fourthTest4">테스트 4</option>
+                </select>
+
+                <input type="button" value="검색" id="searchButton"/><!--검색 버튼-->
+            </div>
+            <div class="resultBox">
+
+            </div>
+        </div>
+        
+        <script src="SelectFunction.js"></script>
+    </body>
+</html>
