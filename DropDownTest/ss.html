@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+ <input type="text" id="Pname">
+ <button type="button" id="btn1">key값 찾기</button>
+ <br>
+ <input type="text" id="Pname1">
+ <button type="button" id="btn2">이름으로 찾기</button>
+ <p id="comeonSolo">여기</p>
+ <p id="comeonDuo">여기</p>
+ <script type="text/javascript">
+  $("button").click(
+      function() {
+       var btnId = this.id;
+       var xhttp = new XMLHttpRequest();
+       xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4
+          && xhttp.status == 200) {
+         myfunc(xhttp.responseText, btnId);
+        }
+       }
+       xhttp.open("GET", "/Users/mmm.zip/OpenSource2022/Organizationch/DropDownTest/datas.json", true);
+       xhttp.send();
+       
+       
+       function myfunc(resp, id) {
+        var arr = JSON.parse(resp);
+        var out = "";
+        for (var i = 0; i < arr.length; i++) {
+         for (key in arr[i]) {
+          if (id == "btn1") {
+           if (key == $("#Pname").val()) {
+            out += arr[i][key] + "<br>";
+            break;
+           }
+          } else if (id == "btn2") {
+           if (arr[i][key] == $("#Pname1")
+             .val()) {
+            out += arr[i].name + "<br>"
+              + arr[i].age + "<br>"
+              + arr[i].address;
+            break;
+           }
+          }
+         }
+        }
+        if (id == "btn1") {
+         document.getElementById("comeonSolo").innerHTML = out;
+        } else if (id == "btn2") {
+         document.getElementById("comeonDuo").innerHTML = out;
+        }
+       }
+      });
+ </script>
+</body>  
+</html>
