@@ -2,6 +2,21 @@
 /* 드롭다운 메뉴                      */
 /*---------------------------------*/
 
-.dropdownmenu > li {
-    float: left;
+.flexContainer{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.selectBox{
+    text-align: center;
+}
+
+.resultBox{
+    width: 700px;
+    height: 600px;
+    border: 1px solid black;
+    text-align: center;
 }

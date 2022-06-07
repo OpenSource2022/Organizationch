@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="Style.css" type="text/css">
+    <head>
+        <meta charset "UTF-8">
+        <title>페이지 이름</title><!--페이지 이름, 차후에 변경-->
+        <script src="jquery.min.js" ></script>
+    </head>
+    <header><center><h1>타이틀</h1></center></header><!--타이틀 이름, 차후에 변경, 이미지 추가 등-->
+
+<body>
+<p id="demo"></p>
+
+<script type="text/javascript">
+
+let xhttp = new XMLHttpRequest();
+
+xhttp.onreadystatechange = function () {
+	if(xhttp.readyState == 4 && xhttp.status == 200){
+		jsonfunc(this.responseText); //this = xhttp
+//		jsonfunc(xhttp.responseText); // 둘다 가능
+	}
+}
+xhttp.open("GET","/Users/mmm.zip/OpenSource2022/Organizationch/DropDownTest/test.json", true);
+xhttp.send();
+
+function jsonfunc( jsonText ) {
+
+	let json = JSON.parse(jsonText); // String -> json으로 변환
+	let txt = "";
+	// 접근법 1
+	for(i=0; i<json.length; i++){
+		for(i=0; i<json.length; i++){
+		txt += json[i].직위 + " " + json[i].이름 + " " +
+			   json[i].이메일 + " " + json[i].전화번호 + " " + json[i].업무+ "<br>";
+	    }
+	} 
+	document.getElementById('demo').innerHTML = txt;
+}
+</script>
+
+</body>
+</html>
