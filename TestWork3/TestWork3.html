@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <link rel="stylesheet" href="Style.css" type="text/css">
+    <head>
+        <meta charset "UTF-8">
+        <title>페이지 이름</title><!--페이지 이름, 차후에 변경-->
+        <script src="jquery.min.js" ></script>
+    </head>
+    <header><center><h1>타이틀</h1></center></header><!--타이틀 이름, 차후에 변경, 이미지 추가 등-->
+    <body>
+        <div class="flexContainer">
+            <div class="inputBox">
+                검색 <input type="text" id="searchBox"/><!--검색 창-->
+                <input type="button" value="검색" id="searchButton"/><!--검색 버튼-->
+            </div>
+            <div class="resultBox"><!--검색 결과 출력 위치-->
+                <div id="inner"></div><!--검색 결과 출력-->
+            </div>
+        </div>
+        <script src="SerchFunction.js"></script>
+    </body>
+</html>

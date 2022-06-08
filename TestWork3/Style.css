@@ -1,0 +1,23 @@
+.flexContainer{ /*페이지 전체*/
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputBox{ /*검색 박스의 위치*/
+    text-align: center;
+}
+
+.resultBox{ /*결과창의 위치와 스타일*/
+    margin-top: 25px;
+    width: 700px;
+    height: 600px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#searchBox{ /*검색 input 박스의 스타일*/
+    width:500px;
+}
