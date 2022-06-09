@@ -1,0 +1,24 @@
+[
+    {
+        "position": "총장",
+        "name": "김일환",
+        "email": "ehkim@jejunu.ac.kr",
+        "phone": "064-754-3674", 
+        "work": "제주대학교 총괄"
+     },
+     {
+        "position": "아라캠퍼스 부총장",
+        "name": "김동전",
+        "email": "hisdjkim@jejunu.ac.kr",
+        "phone": "754-2777",
+        "work": "아라캠퍼스 총괄"
+     },
+    {
+        "position": "사라캠퍼스 부총장",
+        "name": "고전",
+        "email": "koj@jejunu.ac.kr",
+        "phone": "754-4701",
+        "work": "사라캠퍼스 총괄"
+    }
+
+]
