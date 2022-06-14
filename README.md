@@ -26,7 +26,8 @@ JH
 - 데이터파싱 with Python
 - 데이터베이스 구축 및 데이터 관리
 - Client : HTML, CSS, 
-- Server :
+- Server : 
+
 YJ
 
 GM
