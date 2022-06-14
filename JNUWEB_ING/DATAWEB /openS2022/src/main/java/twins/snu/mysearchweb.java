@@ -72,7 +72,10 @@ public class mysearchweb extends HttpServlet {
 	System.out.println("Driverstatement");
 	ResultSet rs = stmt.executeQuery(sql);
 	System.out.println("Driverexcute");
-	String rr = "<table>";
+	String rr = "<table border-collapse:'collapse' width:'50%' border='1' bordercolor='black' >";
+	rr+="<tr vertical-align:'inherit' text-align:'center'>";
+	rr+="<th padding:'10px'>직위 </th>"+"<th padding:'10px'>이름</th>"+"<th padding:'10px'>이메일</th>"+"<th padding:'10px'>전화번호 </th>"+"<th padding:'10px'>업무</th>";
+	rr+="</tr>";
 	while(rs.next()) {
 		rr += "<tr>";
 		for(int i = 1; i <= 5; i++) {
