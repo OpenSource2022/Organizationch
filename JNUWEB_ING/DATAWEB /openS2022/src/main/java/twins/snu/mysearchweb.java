@@ -72,21 +72,38 @@ public class mysearchweb extends HttpServlet {
 	System.out.println("Driverstatement");
 	ResultSet rs = stmt.executeQuery(sql);
 	System.out.println("Driverexcute");
-	String rr = "<table border-collapse:'collapse' width:'50%' border='1' bordercolor='black' >";
-	rr+="<tr vertical-align:'inherit' text-align:'center'>";
-	rr+="<th padding:'10px'>직위 </th>"+"<th padding:'10px'>이름</th>"+"<th padding:'10px'>이메일</th>"+"<th padding:'10px'>전화번호 </th>"+"<th padding:'10px'>업무</th>";
-	rr+="</tr>";
+	String rr = "";
+	if(rs.next()==false) {
+		rr += "<center><h2>옳바른 형식의 업무가 아닙니다.</h2></center>";
+		
+		return rr;
+	}
+	rr = "<table margin-top: 50px width: 700px height: 600px border: 1px solid black text-align: center>";
+	rr = "<table border-collapse:collapse width:50% border=1px black table-layout:fixed >";
+//	rr = "<style>"+"<table border:'1px solid red' border-collapse:'collapse'>" +"</style>";
+	//String rr = "<table border:1px color:'red' width:'60%' text-align:'center'>";
+//	rr+="<tr vertical-align:'inherit' text-align:'center'>";
+//	rr+="<th 'padding':10px 'border': 1px solid black 'border-collapse' : collapse>직위 </th>"+"<th 'padding':10px 'border': 1px solid black 'border-collapse' : collapse>이름</th>"+"<th 'padding':10px 'border': 1px solid black 'border-collapse' :collapse>이메일</th>"+"<th 'padding':10px 'border': 1px solid black 'border-collapse' : collapse>전화번호 </th>"+"<th 'padding':10px 'border': 1px solid black 'border-collapse' : collapse>업무</th>";
+	rr+="<th padding:10px border: 1px solid black border-collapse : collapse>직위 </th>"+"<th padding:10px border: 1px solid black border-collapse : collapse>이름</th>"+"<th padding:10px border: 1px solid black border-collapse :collapse>이메일</th>"+"<th padding:10px border: 1px solid black border-collapse : collapse>전화번호 </th>"+"<th padding:10px border: 1px solid black border-collapse : collapse>업무</th>";
+//	rr+="<th padding :'10px'>직위 </th>"+"<th padding :'10px'>이름</th>"+"<th padding :'10px' >이메일</th>"+"<th padding :'10px' >전화번호 </th>"+"<th padding :'10px' >업무</th>";
+	//	rr+="</tr>";
+	
 	while(rs.next()) {
 		rr += "<tr>";
+		
 		for(int i = 1; i <= 5; i++) {
-			rr += "<td>" + rs.getString(i) + "</td>";
+		//	rr += "<td width='300' height='50' style='table-layout:fixed' border: '1px solid black' border-collapse : 'collapse' >" + rs.getString(i) + "</td>";
+			rr += "<td width=300 height=50 table-layout:fixed border: 1px solid black border-collapse : collapse >" + rs.getString(i) + "</td>";
+		//	rr += "<td  >" + rs.getString(i) + "</td>";
 		}
 		rr += "</tr>";
+		
 	}
 	rr += "</table>";
 	return (rr);
-}
-
+	
+	}
+	
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
