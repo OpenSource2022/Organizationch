@@ -1,10 +1,10 @@
-drop table if exists Jihyun;
+ddrop table if exists Jihyun;
 create table Jihyun (
-	title varchar(30),
+	title varchar(50),
 	name varchar(10),
 	email varchar(30),
 	phone varchar(20),
-	work varchar(100)
+	work varchar(200)
 );
 
 insert into Jihyun values('교무과장','이은영','eun69g@jejunu.ac.kr','064-754-2010','교무과 총괄');
@@ -21,7 +21,7 @@ insert into Jihyun values('학사과장','오성진','sung6809@jejunu.ac.kr','06
 insert into Jihyun values('학사팀장','고기범','ko1211@jejunu.ac.kr','064-754-2026','학사팀 총괄');
 insert into Jihyun values('주무관','이혜진','snowred@jejunu.ac.kr','064-754-2022','졸업, 교육과정');
 insert into Jihyun values('주무관','양은서','yeshappy17@jejunu.ac.kr','064-754-2027','예산, 학생설계전공, 융합전공운영 등');
-insert into Jihyun values('주무관','고유빈','ko4529@jejunu.ac.kr','064-754-2021','휴·복학, 제적, 전과, 입학, 교직, 물품');
+insert into Jihyun values('주무관','고유빈','ko4529@jejunu.ac.kr','064-754-2021','휴·복학, 제적, 전과, 재입학, 교직, 물품');
 insert into Jihyun values('수업팀장','이세라','essell@jejunu.ac.kr','064-754-2025','수업팀장');
 insert into Jihyun values('주무관','오정열','ohyul@jejunu.ac.kr','064-754-2024','수업관련업무');
 insert into Jihyun values('주무관','강소영','ksy1504745@jejunu.ac.kr','064-754-2023','성적, 교류수학, 학점인정');
