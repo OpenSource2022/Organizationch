@@ -20,13 +20,6 @@ import java.sql.Statement;
  */
 public class mysearchweb extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	/*
-	private void printHeader(PrintWriter out) throws ServletException {
-		  out.println("<HTML><HEAD><TITLE>Guestbook</TITLE>");
-		  out.println("<link rel=\"stylesheet\" href=\"Style.css\">");
-		  out.println("</HEAD>");
-		}
-		*/
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -86,36 +79,20 @@ public class mysearchweb extends HttpServlet {
 		
 		return rr;
 	}
-//	rr = "<style> table{width:100%;} table,td,th{border:1px solid #bcbcbc;}</style>";
-//	rr = "<table border-collapse:collapse width:50% table-layout:fixed";
-//	rr = "<table margin-top: 50px width: 700px height: 600px border: 1px solid black text-align: center></table>";
-//	rr = "<table border-collapse:collapse width:50% border:'1px solid black' table-layout:fixed >";
-//	rr = "<table border-collapse:collapse width:50% bordercolor='black'>";
-//	rr = "<table  width=\"100%\" height=200 bgcolor=black bordercolor=\"black\" cellspacing=\"5\">";
 	rr = "<table width=\"80%\" style=\"margin:auto\" height=\"200px\" border=\"1px solid #444444\" border-collapse=\"collapse\"  bordercolor=\"black\">";
-			
-//	rr = "<style>"+"<table border:'1px solid red' border-collapse:'collapse'>" +"</style>";
-	//String rr = "<table border:1px color:'red' width:'60%' text-align:'center'>";
-//	rr+="<tr vertical-align:'inherit' text-align:'center'>";
-//	rr+="<th 'padding':10px 'border': 1px solid black 'border-collapse' : collapse>직위 </th>"+"<th 'padding':10px 'border': 1px solid black 'border-collapse' : collapse>이름</th>"+"<th 'padding':10px 'border': 1px solid black 'border-collapse' :collapse>이메일</th>"+"<th 'padding':10px 'border': 1px solid black 'border-collapse' : collapse>전화번호 </th>"+"<th 'padding':10px 'border': 1px solid black 'border-collapse' : collapse>업무</th>";
-//	rr+="<th padding:10px border: 1px solid black border-collapse : collapse>직위 </th>"+"<th padding:10px border: 1px solid black border-collapse : collapse>이름</th>"+"<th padding:10px border: 1px solid black border-collapse :collapse>이메일</th>"+"<th padding:10px border: 1px solid black border-collapse : collapse>전화번호 </th>"+"<th padding:10px border: 1px solid black border-collapse : collapse>업무</th>";
 	rr += "<th height=\"30px\" width=\"15%\" align=\"center\" bgcolor=\"#C4E9FF\" border=\"1px solid #2b303b\" paddig=\"10px\">직위</th>";
 	rr += "<th height=\"30px\" width=\"15%\" align=\"center\" bgcolor=\"#C4E9FF\"  border=\"1px solid #2b303b\" paddig=\"10px\">이름 </th>";
 	rr += "<th height=\"30px\" width=\"20%\"align=\"center\" bgcolor=\"#C4E9FF\"  border=\"1px solid #2b303b\" paddig=\"10px\">이메일  </th>";
 	rr += "<th height=\"30px\" width=\"15%\" align=\"center\" bgcolor=\"#C4E9FF\"  border=\"1px solid #2b303b\" paddig=\"10px\">전화번호  </th>";
 	rr += "<th height=\"30px\" width=\"40%\" align=\"center\" bgcolor=\"#C4E9FF\"  border=\"1px solid #2b303b\" paddig=\"10px\">업무  </th>";
-//	rr += "<th align=\"center\" bgcolor=\"#fff8dc\">이메일</th>"+"<th align=\"center\" bgcolor=\"#fff8dc\">전화번호</th>"+"<th align=\"center\" bgcolor=\"#fff8dc\">업무</th>";
-	//	rr+="<th padding :'10px'>직위 </th>"+"<th padding :'10px'>이름</th>"+"<th padding :'10px' >이메일</th>"+"<th padding :'10px' >전화번호 </th>"+"<th padding :'10px' >업무</th>";
-	//	rr+="</tr>";
+
 	
 	while(rs.next()) {
 		rr += "<tr align=\"center\" bgcolor=\"white\">";
 		
 		for(int i = 1; i <= 5; i++) {
-		//	rr += "<td width='300' height='50' style='table-layout:fixed' border: '1px solid black' border-collapse : 'collapse' >" + rs.getString(i) + "</td>";
-		//	rr += "<td width:300 height:50 table-layout:fixed border: 1px solid black border-collapse : collapse  text-align: center>" + rs.getString(i) + "</td>";
 			rr+="<td height=\"30px\" width=\"10%\" border=\"1px solid #444444\" paddig=\"10px\" align=\"center\">"+ rs.getString(i) + "</td>";
-			System.out.println(rs.getString(i));		//	rr += "<td  >" + rs.getString(i) + "</td>";
+			System.out.println(rs.getString(i));		
 		}
 		rr += "</tr>";
 		
