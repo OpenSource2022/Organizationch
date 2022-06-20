@@ -1,12 +1,10 @@
 # MVC패턴을 이용한 동적 웹페이지
 
-#### 해결해야 할 부분 
-##### 1)Front
-- 테이블, 색상 등 .java 파일
-##### 2)데이터 포멧 고치기
-##### 3)시간 되면 전화번호 연결
-##### 4)PPT
-- 연지님 
+#### - 사용한 기술 
+###### Java, Servlet, JSP, MySQL, HTML, CSS, Apache Tomcat 
+##### 
+##### 
+##### 추후 전화번호/이메일 링크 연결 예정
 
 
 
@@ -21,20 +19,19 @@
 
 
 
----
+##### 맡은 역할 
 JH
 - 데이터파싱 with Python
 - 데이터베이스 구축 및 데이터 관리
-- Client : HTML, CSS, 
-- Server : 
+- Front(CSS, HTML)
+- Back(JSP, MySQL, Apache Tomcat)
 
 YJ
 - 자료수집
 - Github 관리 및 ppt 
 
-지엠
-
+GM
 - 제주대학교 홈페이지 내 조직도 데이터를 SQL 파일로 정리
 
-DH html 검색창 형태만 구현했습니다. 버튼은 검색창과 연동해서 간단한 기능 동작 가능한거 확인했고, 자세한 내용은 ChangedFeatures파일에
-   업데이트 하겠습니다.
+DH
+- CSS 세부조정 및 로고 제작 
